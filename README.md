@@ -1,3 +1,3 @@
 # What's this?
 
-A simple [blog](magicismight.github.io) for a lazy developer.
+A simple [blog](https://magicismight.github.io) for a lazy developer.
