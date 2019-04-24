@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-23T08:29:55.867Z</updated>
+  <updated>2019-04-24T02:57:56.380Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>App debug tools</title>
+    <link href="http://yoursite.com/2019/04/24/App-debug-tools/"/>
+    <id>http://yoursite.com/2019/04/24/App-debug-tools/</id>
+    <published>2019-04-24T02:56:59.000Z</published>
+    <updated>2019-04-24T02:57:56.380Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://macacajs.github.io/app-inspector/" target="_blank" rel="noopener">View Inspector</a><br><a href="https://github.com/yagiz/Bagel" target="_blank" rel="noopener">iOS network tracker</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://macacajs.github.io/app-inspector/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;View Inspector&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/yagi
+      
+    
+    </summary>
+    
+    
+      <category term="APP debug iOS Android" scheme="http://yoursite.com/tags/APP-debug-iOS-Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Browser cross windows/tabs communication</title>
