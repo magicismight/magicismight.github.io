@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-24T02:57:56.380Z</updated>
+  <updated>2019-04-29T08:59:05.284Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>useful-tricks-for-javascript</title>
+    <link href="http://yoursite.com/2019/04/29/useful-tricks-for-javascript/"/>
+    <id>http://yoursite.com/2019/04/29/useful-tricks-for-javascript/</id>
+    <published>2019-04-29T08:50:01.000Z</published>
+    <updated>2019-04-29T08:59:05.284Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://davidwalsh.name/javascript-tricks" target="_blank" rel="noopener">original article</a></p><h1 id="Get-Unique-Values-of-an-Array"><a href="#Get-Unique-Values-of-an-Array" class="headerlink" title="Get Unique Values of an Array"></a>Get Unique Values of an Array</h1><p>Getting an array of unique values is probably easier than you think:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var j = [...new Set([1, 2, 3, 3])]</span><br><span class="line">&gt;&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure><h1 id="Array-and-Boolean"><a href="#Array-and-Boolean" class="headerlink" title="Array and Boolean"></a>Array and Boolean</h1><p>Ever need to filter falsy values (0, undefined, null, false, etc.) out of an array? You may not have known this trick:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myArray</span><br><span class="line">    .map(item =&gt; &#123;</span><br><span class="line">        // ...</span><br><span class="line">    &#125;)</span><br><span class="line">    // Get rid of bad values</span><br><span class="line">    .filter(Boolean);</span><br><span class="line">Just pass Boolean and all those falsy value go away!</span><br></pre></td></tr></table></figure><h1 id="Create-Empty-Objects"><a href="#Create-Empty-Objects" class="headerlink" title="Create Empty Objects"></a>Create Empty Objects</h1><p>Sure you can create an object that seems empty with {}, but that object still has a <strong>proto</strong> and the usual hasOwnProperty and other object methods. There is a way, however, to create a pure “dictionary” object:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let dict = Object.create(null);</span><br><span class="line"></span><br><span class="line">// dict.__proto__ === &quot;undefined&quot;</span><br><span class="line">// No object properties exist until you add them</span><br></pre></td></tr></table></figure><p>There are absolutely no keys or methods on that object that you don’t put there!</p><h1 id="Get-Query-String-Parameters"><a href="#Get-Query-String-Parameters" class="headerlink" title="Get Query String Parameters"></a>Get Query String Parameters</h1><p>For years we wrote gross regular expressions to get query string values but those days are gone – enter the amazing URLSearchParams API:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// Assuming &quot;?post=1234&amp;action=edit&quot;</span><br><span class="line"></span><br><span class="line">var urlParams = new URLSearchParams(window.location.search);</span><br><span class="line"></span><br><span class="line">console.log(urlParams.has(&apos;post&apos;)); // true</span><br><span class="line">console.log(urlParams.get(&apos;action&apos;)); // &quot;edit&quot;</span><br><span class="line">console.log(urlParams.getAll(&apos;action&apos;)); // [&quot;edit&quot;]</span><br><span class="line">console.log(urlParams.toString()); // &quot;?post=1234&amp;action=edit&quot;</span><br><span class="line">console.log(urlParams.append(&apos;active&apos;, &apos;1&apos;)); // &quot;?post=1234&amp;action=edit&amp;active=1&quot;</span><br></pre></td></tr></table></figure><p>Much easier than we used to fight with!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://davidwalsh.name/javascript-tricks&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;original article&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Get-Unique-Values-of-
+      
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>App debug tools</title>
