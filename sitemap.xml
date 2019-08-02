@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/08/02/React-Native-Performance/</loc>
+    
+    <lastmod>2019-08-02T06:41:56.079Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/05/10/Disable-WKWebView-default-actions-with-user-interacting/</loc>
+    
+    <lastmod>2019-05-10T13:48:16.939Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/04/29/useful-tricks-for-javascript/</loc>
     
     <lastmod>2019-04-29T08:59:05.284Z</lastmod>

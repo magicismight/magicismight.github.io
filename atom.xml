@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-29T08:59:05.284Z</updated>
+  <updated>2019-08-02T06:41:56.079Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React Native Performance</title>
+    <link href="http://yoursite.com/2019/08/02/React-Native-Performance/"/>
+    <id>http://yoursite.com/2019/08/02/React-Native-Performance/</id>
+    <published>2019-08-02T06:40:23.000Z</published>
+    <updated>2019-08-02T06:41:56.079Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.usejournal.com/getting-started-optimizing-a-react-native-app-1d7507c2d849" target="_blank" rel="noopener">Getting Started Optimizing a React Native App</a></p><p><a href="https://facebook.github.io/react-native/docs/performance" target="_blank" rel="noopener"><code>performance</code> in React Native blog</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.usejournal.com/getting-started-optimizing-a-react-native-app-1d7507c2d849&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Getting S
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Disable WKWebView scroll with user interacting</title>
+    <link href="http://yoursite.com/2019/05/10/Disable-WKWebView-default-actions-with-user-interacting/"/>
+    <id>http://yoursite.com/2019/05/10/Disable-WKWebView-default-actions-with-user-interacting/</id>
+    <published>2019-05-10T13:47:19.000Z</published>
+    <updated>2019-05-10T13:48:16.939Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="iOS WKWebView" scheme="http://yoursite.com/tags/iOS-WKWebView/"/>
+    
+  </entry>
   
   <entry>
     <title>useful-tricks-for-javascript</title>
