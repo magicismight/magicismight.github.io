@@ -2,7 +2,7 @@
 layout: title
 title: Create cli tool with typescript
 date: 2021-08-11 22:17:36
-tags:
+tags: Node.js cli typescript
 ---
 
 How to create a node.js cli tool with typescript:
