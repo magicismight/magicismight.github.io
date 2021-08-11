@@ -5,9 +5,9 @@ date: 2021-08-11 22:17:36
 tags:
 ---
 
-# Create cli tool with typescript.
+How to create a node.js cli tool with typescript:
 
-1. Specify a JavaScript file for 'bin' in package.json
+1. Specify a JavaScript file for `bin` in `package.json`
 
 ``` JSON
 "name": "some-cli-tool-name",
