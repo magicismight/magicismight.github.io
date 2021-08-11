@@ -5,6 +5,12 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "scripts": {
+    "new": "hexo n",
+    "generate": "hexo g",
+    "deploy": "hexo d",
+    "server": "hexo s"
+  },
   "dependencies": {
     "hexo": "^3.8.0",
     "hexo-deployer-git": "^1.0.0",
