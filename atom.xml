@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-02T06:41:56.079Z</updated>
+  <updated>2021-08-11T14:55:35.092Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Create cli tool with typescript</title>
+    <link href="http://yoursite.com/2021/08/11/Create-cli-tool-with-typescript/"/>
+    <id>http://yoursite.com/2021/08/11/Create-cli-tool-with-typescript/</id>
+    <published>2021-08-11T14:17:36.000Z</published>
+    <updated>2021-08-11T14:55:35.092Z</updated>
+    
+    <content type="html"><![CDATA[<p>How to create a node.js cli tool with typescript:</p><ol><li>Specify a JavaScript file for <code>bin</code> in <code>package.json</code></li></ol><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"name": "some-cli-tool-name",</span><br><span class="line">"bin": &#123;</span><br><span class="line">  "some-cli-tool-name": "./bin.js"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><ol start="2"><li>Create <code>./bin.js</code></li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Register `ts-node` into node.js environment with a project option,</span></span><br><span class="line"><span class="comment">// cli will throw `Cannot use import statement outside a module ts-node` if `project` not is not found.</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'ts-node'</span>).register(&#123;</span><br><span class="line">  project: <span class="built_in">require</span>(<span class="string">'path'</span>).join(__dirname, <span class="string">'./tsconfig.json'</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Run cli</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./src/index.ts'</span>);</span><br></pre></td></tr></table></figure><ol><li>Add <code>shebang</code> for node at the top of <code>./src/index.ts</code>, </li></ol><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!<span class="regexp">/usr/</span>bin/env ts-node</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> message: <span class="built_in">string</span> = <span class="string">'It works!'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(message);</span><br></pre></td></tr></table></figure><ol start="4"><li><p>Create <code>tsconfig.json</code> and fill with configuration.</p></li><li><p>Write your cli tool with typescript.</p></li><li><p>Publish to npm.</p></li><li><p>Done.</p></li></ol><p>Using npx to run the cli tool you just write in typescript.<br><code>npx some-cli-tool-name</code></p><h1 id="NOTICE"><a href="#NOTICE" class="headerlink" title="NOTICE:"></a>NOTICE:</h1><p>ALL TYPESCRIPT DEPENDENCIES MUST ADD TO <code>&quot;dependencies&quot;</code> IN <code>package.json</code> . LIKE: <code>typescript</code> ITSELF AND <code>@types/*</code> TYPE DEFINITIONS.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;How to create a node.js cli tool with typescript:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Specify a JavaScript file for &lt;code&gt;bin&lt;/code&gt; in &lt;code&gt;package.json&lt;/code
+      
+    
+    </summary>
+    
+    
+      <category term="Node.js cli typescript" scheme="http://yoursite.com/tags/Node-js-cli-typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>React Native Performance</title>

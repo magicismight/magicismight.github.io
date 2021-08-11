@@ -62,6 +62,69 @@
       <div class="outer">
         <section id="main">
   
+    <article id="title-Create-cli-tool-with-typescript" class="article article-type-title" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/08/11/Create-cli-tool-with-typescript/" class="article-date">
+  <time datetime="2021-08-11T14:17:36.000Z" itemprop="datePublished">2021-08-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/11/Create-cli-tool-with-typescript/">Create cli tool with typescript</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>How to create a node.js cli tool with typescript:</p>
+<ol>
+<li>Specify a JavaScript file for <code>bin</code> in <code>package.json</code></li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"name": "some-cli-tool-name",</span><br><span class="line">"bin": &#123;</span><br><span class="line">  "some-cli-tool-name": "./bin.js"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Create <code>./bin.js</code></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Register `ts-node` into node.js environment with a project option,</span></span><br><span class="line"><span class="comment">// cli will throw `Cannot use import statement outside a module ts-node` if `project` not is not found.</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'ts-node'</span>).register(&#123;</span><br><span class="line">  project: <span class="built_in">require</span>(<span class="string">'path'</span>).join(__dirname, <span class="string">'./tsconfig.json'</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Run cli</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./src/index.ts'</span>);</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Add <code>shebang</code> for node at the top of <code>./src/index.ts</code>, </li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!<span class="regexp">/usr/</span>bin/env ts-node</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> message: <span class="built_in">string</span> = <span class="string">'It works!'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(message);</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>Create <code>tsconfig.json</code> and fill with configuration.</p>
+</li>
+<li><p>Write your cli tool with typescript.</p>
+</li>
+<li><p>Publish to npm.</p>
+</li>
+<li><p>Done.</p>
+</li>
+</ol>
+<p>Using npx to run the cli tool you just write in typescript.<br><code>npx some-cli-tool-name</code></p>
+<h1 id="NOTICE"><a href="#NOTICE" class="headerlink" title="NOTICE:"></a>NOTICE:</h1><p>ALL TYPESCRIPT DEPENDENCIES MUST ADD TO <code>&quot;dependencies&quot;</code> IN <code>package.json</code> . LIKE: <code>typescript</code> ITSELF AND <code>@types/*</code> TYPE DEFINITIONS.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2021/08/11/Create-cli-tool-with-typescript/" data-id="cks7mc0a00004d9c91legmo1i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js-cli-typescript/">Node.js cli typescript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-React-Native-Performance" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/02/React-Native-Performance/" class="article-date">
@@ -90,7 +153,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/02/React-Native-Performance/" data-id="cjytqs02f0004qvl0luu7v1sy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/02/React-Native-Performance/" data-id="cks7mc0a10005d9c9s6c5nayp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/Disable-WKWebView-default-actions-with-user-interacting/" data-id="cjytqs02g0005qvl01ito2dvt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/10/Disable-WKWebView-default-actions-with-user-interacting/" data-id="cks7mc09z0003d9c9gu251815" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-WKWebView/">iOS WKWebView</a></li></ul>
@@ -175,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/29/useful-tricks-for-javascript/" data-id="cjytqs02i0008qvl099l2amp4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/29/useful-tricks-for-javascript/" data-id="cks7mc0a20009d9c98uciuqv7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
@@ -214,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/24/App-debug-tools/" data-id="cjytqs0260000qvl0xxp9am2n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/24/App-debug-tools/" data-id="cks7mc09r0000d9c9pgz7knqt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/APP-debug-iOS-Android/">APP debug iOS Android</a></li></ul>
@@ -259,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/23/Browser-cross-windows-tabs-communication/" data-id="cjytqs02a0001qvl0udynrain" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/23/Browser-cross-windows-tabs-communication/" data-id="cks7mc09w0001d9c9nbw68ops" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/browser-BroadcastChannel-SharedWorker/">browser BroadcastChannel SharedWorker</a></li></ul>
@@ -298,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/23/hello-world/" data-id="cjytqs02e0003qvl0jo7ecl4t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/23/hello-world/" data-id="cks7mc0a20008d9c9ownscvnm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -321,7 +384,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APP-debug-iOS-Android/">APP debug iOS Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/browser-BroadcastChannel-SharedWorker/">browser BroadcastChannel SharedWorker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS-WKWebView/">iOS WKWebView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APP-debug-iOS-Android/">APP debug iOS Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js-cli-typescript/">Node.js cli typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/browser-BroadcastChannel-SharedWorker/">browser BroadcastChannel SharedWorker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS-WKWebView/">iOS WKWebView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
     </div>
   </div>
 
@@ -331,7 +394,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/APP-debug-iOS-Android/" style="font-size: 10px;">APP debug iOS Android</a> <a href="/tags/browser-BroadcastChannel-SharedWorker/" style="font-size: 10px;">browser BroadcastChannel SharedWorker</a> <a href="/tags/iOS-WKWebView/" style="font-size: 10px;">iOS WKWebView</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a>
+      <a href="/tags/APP-debug-iOS-Android/" style="font-size: 10px;">APP debug iOS Android</a> <a href="/tags/Node-js-cli-typescript/" style="font-size: 10px;">Node.js cli typescript</a> <a href="/tags/browser-BroadcastChannel-SharedWorker/" style="font-size: 10px;">browser BroadcastChannel SharedWorker</a> <a href="/tags/iOS-WKWebView/" style="font-size: 10px;">iOS WKWebView</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a>
     </div>
   </div>
 
@@ -340,7 +403,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -351,6 +414,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/08/11/Create-cli-tool-with-typescript/">Create cli tool with typescript</a>
+          </li>
         
           <li>
             <a href="/2019/08/02/React-Native-Performance/">React Native Performance</a>
@@ -368,10 +435,6 @@
             <a href="/2019/04/24/App-debug-tools/">App debug tools</a>
           </li>
         
-          <li>
-            <a href="/2019/04/23/Browser-cross-windows-tabs-communication/">Browser cross windows/tabs communication</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -384,7 +447,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 Horcrux Chen<br>
+      &copy; 2021 Horcrux Chen<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

@@ -5,20 +5,20 @@
   
 
   
-  <title>Browser cross windows/tabs communication | Horcrux&#39;s blog</title>
+  <title>Create cli tool with typescript | Horcrux&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="key words: cookie + setInterval localStorage + window.onstorage event WebSocket BroadcastChannel SharedWorker">
-<meta name="keywords" content="browser BroadcastChannel SharedWorker">
+  <meta name="description" content="How to create a node.js cli tool with typescript:  Specify a JavaScript file for bin in package.json  1234&quot;name&quot;: &quot;some-cli-tool-name&quot;,&quot;bin&quot;: &amp;#123;  &quot;some-cli-tool-name&quot;: &quot;./bin.js&quot;&amp;#125;,  Create ./">
+<meta name="keywords" content="Node.js cli typescript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Browser cross windows&#x2F;tabs communication">
-<meta property="og:url" content="http://yoursite.com/2019/04/23/Browser-cross-windows-tabs-communication/index.html">
+<meta property="og:title" content="Create cli tool with typescript">
+<meta property="og:url" content="http://yoursite.com/2021/08/11/Create-cli-tool-with-typescript/index.html">
 <meta property="og:site_name" content="Horcrux&#39;s blog">
-<meta property="og:description" content="key words: cookie + setInterval localStorage + window.onstorage event WebSocket BroadcastChannel SharedWorker">
+<meta property="og:description" content="How to create a node.js cli tool with typescript:  Specify a JavaScript file for bin in package.json  1234&quot;name&quot;: &quot;some-cli-tool-name&quot;,&quot;bin&quot;: &amp;#123;  &quot;some-cli-tool-name&quot;: &quot;./bin.js&quot;&amp;#125;,  Create ./">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-23T08:29:55.867Z">
+<meta property="og:updated_time" content="2021-08-11T14:55:35.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Browser cross windows&#x2F;tabs communication">
-<meta name="twitter:description" content="key words: cookie + setInterval localStorage + window.onstorage event WebSocket BroadcastChannel SharedWorker">
+<meta name="twitter:title" content="Create cli tool with typescript">
+<meta name="twitter:description" content="How to create a node.js cli tool with typescript:  Specify a JavaScript file for bin in package.json  1234&quot;name&quot;: &quot;some-cli-tool-name&quot;,&quot;bin&quot;: &amp;#123;  &quot;some-cli-tool-name&quot;: &quot;./bin.js&quot;&amp;#125;,  Create ./">
   
     <link rel="alternate" href="/atom.xml" title="Horcrux&#39;s blog" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Browser-cross-windows-tabs-communication" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="title-Create-cli-tool-with-typescript" class="article article-type-title" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/04/23/Browser-cross-windows-tabs-communication/" class="article-date">
-  <time datetime="2019-04-23T08:27:48.000Z" itemprop="datePublished">2019-04-23</time>
+    <a href="/2021/08/11/Create-cli-tool-with-typescript/" class="article-date">
+  <time datetime="2021-08-11T14:17:36.000Z" itemprop="datePublished">2021-08-11</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Browser cross windows/tabs communication
+      Create cli tool with typescript
     </h1>
   
 
@@ -87,21 +87,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="key-words"><a href="#key-words" class="headerlink" title="key words:"></a>key words:</h2><ul>
-<li>cookie + setInterval</li>
-<li>localStorage + <code>window.onstorage</code> event</li>
-<li>WebSocket</li>
-<li>BroadcastChannel</li>
-<li>SharedWorker</li>
-</ul>
+        <p>How to create a node.js cli tool with typescript:</p>
+<ol>
+<li>Specify a JavaScript file for <code>bin</code> in <code>package.json</code></li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"name": "some-cli-tool-name",</span><br><span class="line">"bin": &#123;</span><br><span class="line">  "some-cli-tool-name": "./bin.js"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Create <code>./bin.js</code></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Register `ts-node` into node.js environment with a project option,</span></span><br><span class="line"><span class="comment">// cli will throw `Cannot use import statement outside a module ts-node` if `project` not is not found.</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'ts-node'</span>).register(&#123;</span><br><span class="line">  project: <span class="built_in">require</span>(<span class="string">'path'</span>).join(__dirname, <span class="string">'./tsconfig.json'</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Run cli</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./src/index.ts'</span>);</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Add <code>shebang</code> for node at the top of <code>./src/index.ts</code>, </li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!<span class="regexp">/usr/</span>bin/env ts-node</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> message: <span class="built_in">string</span> = <span class="string">'It works!'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(message);</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>Create <code>tsconfig.json</code> and fill with configuration.</p>
+</li>
+<li><p>Write your cli tool with typescript.</p>
+</li>
+<li><p>Publish to npm.</p>
+</li>
+<li><p>Done.</p>
+</li>
+</ol>
+<p>Using npx to run the cli tool you just write in typescript.<br><code>npx some-cli-tool-name</code></p>
+<h1 id="NOTICE"><a href="#NOTICE" class="headerlink" title="NOTICE:"></a>NOTICE:</h1><p>ALL TYPESCRIPT DEPENDENCIES MUST ADD TO <code>&quot;dependencies&quot;</code> IN <code>package.json</code> . LIKE: <code>typescript</code> ITSELF AND <code>@types/*</code> TYPE DEFINITIONS.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/23/Browser-cross-windows-tabs-communication/" data-id="cks7mc09w0001d9c9nbw68ops" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2021/08/11/Create-cli-tool-with-typescript/" data-id="cks7mc0a00004d9c91legmo1i" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/browser-BroadcastChannel-SharedWorker/">browser BroadcastChannel SharedWorker</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js-cli-typescript/">Node.js cli typescript</a></li></ul>
 
     </footer>
   </div>
@@ -109,19 +127,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/04/24/App-debug-tools/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          App debug tools
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/08/02/React-Native-Performance/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">React Native Performance</div>
     </a>
   
 </nav>
