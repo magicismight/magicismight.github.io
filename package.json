@@ -5,6 +5,9 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "new": "hexo n",
     "generate": "hexo g",
